@@ -1,0 +1,438 @@
+/* ==============================================
+   NAVBAR - Comic Strip Style
+   ============================================== */
+
+nav {
+    position: sticky;
+    top: 0;
+    background: var(--comic-white);
+    border-bottom: 6px solid var(--comic-black);
+    z-index: 1000;
+    box-shadow: 0 8px 0 rgba(0, 0, 0, 0.3);
+    overflow: visible;
+}
+
+/* Nav Corner Decorations */
+.nav-corner {
+    position: absolute;
+    top: -8px;
+    font-size: 2rem;
+    color: var(--comic-yellow);
+    text-shadow: 2px 2px 0 var(--comic-black);
+    animation: cornerSparkle 2s ease-in-out infinite;
+    z-index: 10;
+}
+
+.corner-left {
+    left: 10px;
+}
+
+.corner-right {
+    right: 10px;
+    animation-delay: 1s;
+}
+
+@keyframes cornerSparkle {
+
+    0%,
+    100% {
+        transform: rotate(0deg) scale(1);
+        opacity: 0.7;
+    }
+
+    50% {
+        transform: rotate(180deg) scale(1.3);
+        opacity: 1;
+    }
+}
+
+.nav-container {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-shrink: 0;
+}
+
+.logo-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--comic-orange);
+    border: 5px solid var(--comic-black);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Bangers', cursive;
+    font-size: 1.8rem;
+    box-shadow: 4px 4px 0 var(--comic-black);
+    transform: rotate(-5deg);
+    position: relative;
+    transition: all 0.3s ease;
+    animation: iconBobble 3s ease-in-out infinite;
+    cursor: pointer;
+}
+
+.logo-icon:hover {
+    transform: rotate(0deg) scale(1.1);
+    box-shadow: 6px 6px 0 var(--comic-black), 0 0 20px var(--comic-orange);
+}
+
+@keyframes iconBobble {
+
+    0%,
+    100% {
+        transform: rotate(-5deg);
+    }
+
+    50% {
+        transform: rotate(-3deg);
+    }
+}
+
+.logo-spark {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 15px;
+    height: 15px;
+    background: radial-gradient(circle, var(--comic-yellow), transparent);
+    border-radius: 50%;
+    animation: sparkPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes sparkPulse {
+
+    0%,
+    100% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.5);
+    }
+}
+
+.logo-text {
+    font-family: 'Bangers', cursive;
+    font-size: 2rem;
+    color: var(--comic-orange);
+    text-shadow: 3px 3px 0 var(--comic-black);
+    letter-spacing: 2px;
+    position: relative;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.logo-text:hover {
+    color: var(--comic-blue);
+    transform: translateY(-2px);
+}
+
+.logo-underline {
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--comic-orange);
+    transform-origin: left;
+    animation: underlineWiggle 2s ease-in-out infinite;
+}
+
+@keyframes underlineWiggle {
+
+    0%,
+    100% {
+        transform: scaleX(0);
+    }
+
+    50% {
+        transform: scaleX(1);
+    }
+}
+
+/* Nav Links */
+.nav-links {
+    display: flex;
+    gap: 2.5rem;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    display: inline-block;
+    color: var(--comic-black);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    position: relative;
+    white-space: nowrap;
+}
+
+.nav-links a:hover {
+    color: var(--comic-orange);
+    transform: translateY(-2px);
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: var(--comic-orange);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Hover burst labels */
+.link-burst {
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%) scale(0);
+    font-family: 'Bangers', cursive;
+    font-size: 1.2rem;
+    color: var(--comic-red);
+    text-shadow: 2px 2px 0 var(--comic-black);
+    white-space: nowrap;
+    animation: burstPopIn 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+    pointer-events: none;
+}
+
+@keyframes burstPopIn {
+    0% {
+        transform: translateX(-50%) scale(0) rotate(-45deg);
+        opacity: 0;
+    }
+
+    70% {
+        transform: translateX(-50%) scale(1.2) rotate(5deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(-50%) scale(1) rotate(0deg);
+        opacity: 1;
+    }
+}
+
+/* CTA button */
+.nav-cta {
+    background: var(--comic-orange) !important;
+    color: var(--comic-white) !important;
+    padding: 0.75rem 1.5rem;
+    border: 4px solid var(--comic-black);
+    border-radius: 8px;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    box-shadow: 4px 4px 0 var(--comic-black);
+    transition: all 0.2s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    white-space: nowrap;
+}
+
+.nav-cta::after {
+    content: none !important;
+}
+
+.cta-icon {
+    display: inline-block;
+    animation: iconRotate 2s linear infinite;
+}
+
+@keyframes iconRotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.cta-glow {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transition: left 0.6s ease;
+    pointer-events: none;
+}
+
+.nav-cta:hover .cta-glow {
+    left: 100%;
+}
+
+.nav-cta:hover {
+    background: var(--comic-blue) !important;
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 var(--comic-black), 0 0 15px var(--comic-orange);
+}
+
+/* Mobile hamburger */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.menu-toggle span {
+    width: 30px;
+    height: 4px;
+    background: var(--comic-black);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    display: block;
+}
+
+/* ── Responsive ─────────────────────────────── */
+
+/* Tablet (768px – 1024px) */
+@media (max-width: 1024px) {
+    .nav-container {
+        padding: 1rem 1.5rem;
+    }
+
+    .nav-links {
+        gap: 1.5rem;
+    }
+
+    .nav-links a {
+        font-size: 1rem;
+    }
+
+    .logo-text {
+        font-size: 1.7rem;
+    }
+
+    .logo-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+
+    .nav-cta {
+        padding: 0.6rem 1.1rem;
+        font-size: 1rem;
+    }
+}
+
+/* Mobile (≤ 768px) */
+@media (max-width: 768px) {
+    nav {
+        position: sticky;
+        top: 0;
+    }
+
+    .nav-container {
+        padding: 0.8rem 1.2rem;
+        justify-content: space-between;
+    }
+
+    .logo {
+        gap: 0.6rem;
+    }
+
+    .logo-icon {
+        width: 44px;
+        height: 44px;
+        font-size: 1.3rem;
+    }
+
+    .logo-text {
+        font-size: 1.4rem;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 74px;
+        left: -100%;
+        flex-direction: column;
+        background: var(--comic-white);
+        width: 100%;
+        padding: 2rem;
+        gap: 1.5rem;
+        transition: left 0.3s ease;
+        border-bottom: 6px solid var(--comic-black);
+        box-shadow: 0 8px 0 rgba(0, 0, 0, 0.3);
+        z-index: 999;
+        align-items: flex-start;
+    }
+
+    .nav-links.active {
+        left: 0;
+    }
+
+    .nav-links a {
+        font-size: 1.3rem;
+    }
+
+    .nav-cta {
+        font-size: 1.2rem;
+        padding: 0.75rem 1.5rem;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(8px, 8px);
+    }
+
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(8px, -8px);
+    }
+
+    .nav-corner {
+        display: none;
+    }
+}
+
+/* Small phones (≤ 400px) */
+@media (max-width: 400px) {
+    .logo-text {
+        display: none;
+    }
+}

@@ -1,0 +1,80 @@
+/* ==============================================
+   NAVBAR ENHANCEMENTS - Extra Comic Effects
+   ============================================== */
+
+/* Corner decorations extra pulse */
+.nav-corner {
+    filter: drop-shadow(0 0 4px var(--comic-yellow));
+}
+
+/* Logo icon extra hover glow */
+.logo-icon::after {
+    content: '';
+    position: absolute;
+    inset: -3px;
+    border-radius: 14px;
+    border: 3px solid var(--comic-yellow);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.logo-icon:hover::after {
+    opacity: 1;
+    animation: cornerGlow 1s ease-in-out infinite;
+}
+
+@keyframes cornerGlow {
+
+    0%,
+    100% {
+        border-color: var(--comic-yellow);
+    }
+
+    50% {
+        border-color: var(--comic-orange);
+    }
+}
+
+/* Nav link extra underline colour cycle */
+.nav-links a:hover::after {
+    background: linear-gradient(90deg, var(--comic-orange), var(--comic-yellow), var(--comic-red));
+}
+
+/* CTA button extra shadow pulse */
+.nav-cta {
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.nav-cta:hover {
+    animation: ctaShadowPulse 0.6s ease-in-out;
+}
+
+@keyframes ctaShadowPulse {
+    0% {
+        box-shadow: 4px 4px 0 var(--comic-black);
+    }
+
+    50% {
+        box-shadow: 6px 6px 0 var(--comic-black), 0 0 20px var(--comic-orange);
+    }
+
+    100% {
+        box-shadow: 2px 2px 0 var(--comic-black), 0 0 15px var(--comic-orange);
+    }
+}
+
+/* Hamburger active state extra style */
+.menu-toggle.active span {
+    background: var(--comic-orange);
+}
+
+/* Mobile menu link hover colour */
+@media (max-width: 768px) {
+    .nav-links.active {
+        background: linear-gradient(180deg, var(--comic-white) 0%, #FFF9E6 100%);
+    }
+
+    .nav-links a:hover {
+        color: var(--comic-blue);
+    }
+}
