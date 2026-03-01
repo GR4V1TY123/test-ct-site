@@ -45,7 +45,7 @@ function Hero() {
 
             {/* Main hero content — no box/border */}
             <div className="hero-content">
-                <div className="hero-badge">✦ TSEC TECHNICAL COMMITTEE</div>
+                {/* <div className="hero-badge"> TSEC TECHNICAL COMMITTEE</div> */}
                 <div className="hero-subtitle">Welcome to</div>
 
                 <div className="title-wrapper">
@@ -61,13 +61,13 @@ function Hero() {
                 </p>
 
                 <div className="hero-buttons">
-                    <a href="#events" className="btn-primary">
+                    <a href="https://tseccodetantra.com/NFC-4.0/" target="_blank" rel="noopener noreferrer" className="btn-primary">
                         <span className="btn-glow"></span>
-                        ⚡ ACTIVATE HACK MODE
+                        NFC 4.0
                     </a>
                     <a href="#about" className="btn-secondary">
                         <span className="btn-glow"></span>
-                        💻 KNOW MORE
+                        KNOW MORE
                     </a>
                 </div>
             </div>

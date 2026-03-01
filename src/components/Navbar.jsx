@@ -9,14 +9,14 @@ function Navbar() {
     return (
         <nav>
             {/* Comic corner decorations */}
-            <div className="nav-corner corner-left">⚡</div>
-            <div className="nav-corner corner-right">⚡</div>
+            {/* <div className="nav-corner corner-left">⚡</div>
+            <div className="nav-corner corner-right">⚡</div> */}
 
             <div className="nav-container">
 
                 <div className="logo">
                     <div className="logo-icon">
-                        CT
+                        <img src="/codetantra_logo_cleaned.png" alt="Committee Logo" className="logo-img" />
                         <span className="logo-spark"></span>
                     </div>
                     <div className="logo-text">
@@ -54,8 +54,8 @@ function Navbar() {
                         </a>
                     </li>
                     <li>
-                        <a href="#" className="nav-cta">
-                            <span className="cta-icon">⚡</span>
+                        <a href="https://tseccodetantra.com/NFC-4.0/" target="_blank" rel="noopener noreferrer" className="nav-cta">
+
                             NEED FOR CODE 4.0
                             <span className="cta-glow"></span>
                         </a>
