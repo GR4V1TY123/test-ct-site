@@ -13,10 +13,10 @@ function App() {
             <div className="comic-frame"></div>
             <Navbar />
             <Hero />
-            <Stats />
+            {/* <Stats /> */}
             <About />
             <Events />
-            <CTA />
+            {/* <CTA /> */}
             <ImageFlow/>
             <Footer />
         </>

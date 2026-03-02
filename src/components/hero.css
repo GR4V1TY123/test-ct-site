@@ -4,7 +4,7 @@
 
 /* ── Shutter Entrance ────────────────────────── */
 .hero {
-    min-height: 100vh;
+    max-height: 90vh;
     background:
         repeating-linear-gradient(0deg,
             var(--comic-yellow) 0px,
@@ -15,7 +15,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 6rem 2rem 4rem;
+    padding: 6rem 2rem 3rem;
     position: relative;
     overflow: hidden;
     clip-path: polygon(50% 0%, 50% 0%, 50% 100%, 50% 100%);
@@ -700,7 +700,7 @@
     text-decoration: none;
     box-shadow: 5px 5px 0 var(--comic-black);
     transition: all 0.2s ease;
-    cursor: pointer;
+    cursor: url("../assets/pointer.png"), pointer;
     position: relative;
     overflow: hidden;
     animation: buttonShake 3s ease-in-out infinite;
@@ -724,7 +724,7 @@
     text-decoration: none;
     box-shadow: 5px 5px 0 var(--comic-black);
     transition: all 0.2s ease;
-    cursor: pointer;
+    cursor: url("../assets/pointer.png"), pointer;
     position: relative;
     overflow: hidden;
     animation: buttonShake 3s ease-in-out 0.5s infinite;

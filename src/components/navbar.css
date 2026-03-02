@@ -4,11 +4,11 @@
 
 nav {
     position: sticky;
-    top: 0;
+    top: 6px;
     background: var(--comic-white);
     border-bottom: 6px solid var(--comic-black);
     z-index: 1000;
-    box-shadow: 0 8px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: 0 6px 0 rgba(0, 0, 0, 0.3);
     overflow: visible;
 }
 
@@ -50,7 +50,7 @@ nav {
     max-width: 1400px;
     width: 100%;
     margin: 0 auto;
-    padding: 1rem 2rem;
+    padding: 0.3rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -80,7 +80,7 @@ nav {
     position: relative;
     transition: all 0.3s ease;
     animation: iconBobble 3s ease-in-out infinite;
-    cursor: pointer;
+    cursor: url("../assets/pointer.png"), pointer;
     overflow: hidden;
     padding: 2px;
 }
@@ -204,6 +204,7 @@ nav {
 .nav-links a:hover {
     color: var(--comic-orange);
     transform: translateY(-2px);
+    cursor: url("../assets/pointer.png"), pointer;
 }
 
 .nav-links a::after {
@@ -265,7 +266,7 @@ nav {
     letter-spacing: 2px;
     box-shadow: 4px 4px 0 var(--comic-black);
     transition: all 0.2s ease;
-    cursor: pointer;
+    cursor: url("../assets/pointer.png"), pointer;
     position: relative;
     overflow: hidden;
     display: inline-flex;
@@ -319,7 +320,7 @@ nav {
     display: none;
     flex-direction: column;
     gap: 5px;
-    cursor: pointer;
+    cursor: url("../assets/pointer.png"), pointer;
     flex-shrink: 0;
 }
 

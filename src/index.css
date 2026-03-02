@@ -23,6 +23,11 @@ body {
     background: var(--comic-bg);
     color: var(--comic-black);
     overflow-x: hidden;
+    cursor: url("assets/arrow.png"), auto;
+}
+
+button, a {
+    cursor: url("assets/pointer.png"), pointer;
 }
 
 /* Comic Border Frame */
@@ -32,7 +37,10 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    border: 12px solid var(--comic-black);
+    border-left: 12px solid var(--comic-black);
+    border-left: 12px solid var(--comic-black);
+    border-top: 6px solid var(--comic-black);
+    border-bottom: 6px solid var(--comic-black);
     pointer-events: none;
     z-index: 9999;
 }
@@ -214,7 +222,6 @@ body {
     font-size: 1.1rem;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     user-select: none;
-    cursor: default;
 }
 
 .feature-badge:hover {
@@ -372,12 +379,13 @@ body {
     box-shadow: 10px 10px 0 var(--comic-black);
     transition: all 0.3s ease;
     position: relative;
-    cursor: pointer;
+    cursor: url("assets/pointer.png"), pointer;
 }
 
 .event-card:hover {
     transform: translate(-5px, -5px) rotate(-1deg);
     box-shadow: 15px 15px 0 var(--comic-black);
+    cursor: url("assets/pointer.png"), pointer;
 }
 
 /* ============================= */
@@ -626,6 +634,7 @@ body {
 .cta-button:hover {
     transform: translate(5px, 5px);
     box-shadow: 5px 5px 0 var(--comic-black);
+    cursor: url("assets/pointer.png"), pointer;
 }
 
 .cta-button:active {
@@ -710,6 +719,7 @@ footer {
 .social-icon:hover {
     transform: translate(2px, 2px);
     box-shadow: 2px 2px 0 var(--comic-orange);
+    cursor: url("assets/pointer.png"), pointer;
 }
 
 .footer-section h3 {
@@ -737,6 +747,7 @@ footer {
 
 .footer-links a:hover {
     color: var(--comic-yellow);
+    cursor: url("assets/pointer.png"), pointer;
 }
 
 .footer-contact p {
@@ -762,6 +773,7 @@ footer {
 .footer-email:hover {
     transform: translate(2px, 2px);
     box-shadow: 2px 2px 0 var(--comic-yellow);
+    cursor: url("assets/pointer.png"), pointer;
 }
 
 .footer-bottom {
