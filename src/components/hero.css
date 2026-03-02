@@ -772,6 +772,7 @@
 /* ── Responsive ──────────────────────────────── */
 @media (max-width: 768px) {
     .hero {
+        min-height: 93vh;
         padding: 5rem 1rem 3rem;
     }
 
