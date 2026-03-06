@@ -4,7 +4,7 @@
 
 nav {
     position: sticky;
-    top: 6px;
+    top: 0px;
     background: var(--comic-white);
     border-bottom: 6px solid var(--comic-black);
     z-index: 1000;

@@ -373,7 +373,7 @@ button, a {
 .event-card {
     background: var(--comic-bg);
     border: 6px solid var(--comic-black);
-    padding: 2.5rem;
+    padding: 2rem;
     box-shadow: 10px 10px 0 var(--comic-black);
     transition: all 0.3s ease;
     position: relative;
@@ -482,11 +482,12 @@ button, a {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
+    margin: 1rem 1rem;
 }
 
 .polaroid {
     background: white;
-    padding: 1rem 1rem 2rem;
+    padding: 0.2rem;
     border: 5px solid var(--comic-black);
     box-shadow: 6px 6px 0 var(--comic-black);
     transform: rotate(-3deg);
